@@ -14,4 +14,9 @@ Ingredient.create!(name: 'mint leaves')
 Ingredient.create!(name: 'rum')
 Ingredient.create!(name: 'vodka')
 Ingredient.create!(name: 'sparkling water')
+Ingredient.create!(name: 'whiskey')
+Ingredient.create!(name: 'cola')
+Ingredient.create!(name: 'lime')
+Ingredient.create!(name: 'bitters')
+
 puts 'Finished!'
