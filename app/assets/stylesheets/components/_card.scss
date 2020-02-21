@@ -40,8 +40,11 @@
 }
 
 #side {
-  height: 100vh;
+  background: white;
   width: 20%;
+  height: 250px;
   position: sticky;
   margin-left: 10px;
+  padding: 20px;
+  border-radius: 5px;
 }

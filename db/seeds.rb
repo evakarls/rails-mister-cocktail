@@ -8,15 +8,11 @@
 puts 'Cleaning database...'
 Ingredient.destroy_all
 
-Ingredient.create!(name: 'lemon')
-Ingredient.create!(name: 'ice')
-Ingredient.create!(name: 'mint leaves')
-Ingredient.create!(name: 'rum')
-Ingredient.create!(name: 'vodka')
-Ingredient.create!(name: 'sparkling water')
-Ingredient.create!(name: 'whiskey')
-Ingredient.create!(name: 'cola')
-Ingredient.create!(name: 'lime')
-Ingredient.create!(name: 'bitters')
+url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+ingredients = JSON.parse(open(url).read)
+xx = ingredients['drinks']
+xx.each do |x|
+  Ingredient.create(name: x['strIngredient1'])
+end
 
 puts 'Finished!'
