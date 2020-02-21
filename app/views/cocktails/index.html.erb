@@ -1,23 +1,24 @@
 <div class="banner-main" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 5%), url('<%= image_path 'https://source.unsplash.com/dmkmrNptMpw/1600x900/' %>');">
   <div class="container">
     <h1><i class="fas fa-cocktail"></i> Mr Cocktail</h1>
-    <h2>Your one-stop-show for delicious drinks!</h2>
+    <p>Mr Cocktail helps you organise your cocktail recipes.</p>
   </div>
 </div>
 <div class="container">
-  <h2>Explore our cocktails</h2>
+  <!-- <h2>Explore our cocktails</h2>
   <p>Mr Cocktail has a vast collection of cocktails for your enjoyment. Browse
-  the selection and find the perfect drink for you.</p>
-    <div class="row">
-      <% @cocktails.each do |cocktail| %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key%>')">
-        <%= link_to cocktail.name, cocktail_path(cocktail)%></div>
-          <!-- <h5><%= cocktail.name %></h5> -->
-      <% end %>
-    <div class="col-4">
-      <div class="frame">
-        <h2>Don't see your favorite cocktail? Add it to our collection!</h2>
-         <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary" %>
+  the selection and find the perfect drink for you.</p> -->
+    <div class="main-container">
+        <div class="cards">
+          <% @cocktails.each do |cocktail| %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key%>')">
+            <%= link_to cocktail.name, cocktail_path(cocktail)%></div>
+          <% end %>
+        </div>
+        <div id="side">
+            <h3>Don't see your favorite cocktail?</h3>
+            <p>Add it to our collection!</p>
+            <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary" %>
         </div>
     </div>
   </div>

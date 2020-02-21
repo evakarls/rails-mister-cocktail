@@ -2,7 +2,7 @@
   background-size: cover;
   background-position: center;
   height: 180px;
-  width: 300px;
+  width: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,4 +12,36 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 10px;
+}
+
+.card-category a {
+  color: white;
+  text-decoration: none;
+}
+
+.card-category a:hover {
+  opacity: 0.6;
+}
+
+
+
+.main-container {
+  display: flex;
+
+}
+
+.cards {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+#side {
+  height: 100vh;
+  width: 20%;
+  position: sticky;
+  margin-left: 10px;
 }
